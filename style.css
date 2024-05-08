@@ -1,0 +1,169 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --primary-font: "Outfit", sans-serif;
+}
+
+/* General Style Start*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #0d192b;
+  min-height: 100vh;
+  font-family: var(--primary-font);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a,
+h2 {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* General Style End */
+
+/* ----------------------- */
+
+/* NFT Card Style Start */
+
+.card {
+  max-width: 35rem;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #15273f;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-box:hover .overlay {
+  opacity: 0.3;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.img-box:hover .overlay + .view {
+  display: block;
+}
+
+.main-img img {
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  background-color: #00fff7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.view {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-box-info h2 {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.text-box-info h2:hover {
+  color: #00fff7;
+}
+
+.text-box-info p {
+  color: #8095b0;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.text-box-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eth,
+.day {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eth p {
+  color: #00fff7;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.day p {
+  font-weight: 400;
+}
+
+.avatar-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid #2f415b;
+  padding: 1.5rem 0 1rem 0;
+}
+
+.avatar-box img {
+  width: 3rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.avatar-box a {
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.avatar-box a:hover {
+  color: #00fff7;
+}
+
+@media (max-width: 380px) {
+  .card {
+    margin: 0 2rem 0 2rem;
+  }
+
+  .text-box-info p {
+    font-size: 1.5rem;
+  }
+}
